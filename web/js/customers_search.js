@@ -4,7 +4,7 @@ $(document).ready(function() {
 
         keyword = $( "#keyword").val();
 
-        $.get( "api", { s: keyword } )
+        $.get( "index.php/api/index?s=", { s: keyword } )
 
             .done(function( data ) {
 

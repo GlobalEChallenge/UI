@@ -14,7 +14,7 @@ class ApiController extends Controller
         $keywords = urlencode($s);
         $results = Yii::$app->cache->get($keywords);
         if($results === false){
-            $results = file_get_contents('http://localhost:8888/GlobalEApi?customer='.$keywords);
+            $results = file_get_contents('http://52.36.149.39:8080/?customer='.$keywords);
             Yii::$app->cache->set($keywords,$results,self::CACHE_RESULTS);
         }
 
